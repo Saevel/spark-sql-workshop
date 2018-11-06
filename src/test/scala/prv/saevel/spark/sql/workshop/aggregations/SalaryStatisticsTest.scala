@@ -18,7 +18,7 @@ class SalaryStatisticsTest extends WordSpec with Matchers with StaticPropertyChe
 
   implicit val doubleEquality = TolerantNumerics.tolerantDoubleEquality(0.001)
 
-  private implicit val sparkContext = new SparkContext(new SparkConf().setMaster("local[1]").setAppName("EmployeeSalaryLensTest"))
+  private implicit val sparkContext = new SparkContext(new SparkConf().setMaster("local[1]").setAppName("SalaryStatisticsTest"))
 
   private implicit val sqlContext = new HiveContext(sparkContext)
 

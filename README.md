@@ -32,3 +32,14 @@ Spark SQL Workshop
         
         Run the "SalaryStatisticsTest" to verify the correctness of your implementation.
        
+       
+     Task 4: UDFs
+        
+        Implement the "apply" method in "prv.saevel.spark.sql.workshop.udf.ConsonantsUDF" so that it implements a 
+        function that removes all the vowels from a String column in Spark SQL and leaves only consonants (we assume 
+        the ASCII consonant / vowel set) and registers this function as an UDF named 'consonants'.
+        
+        Run the "ConsonantsUDFTest" to verify the correctness of your implementation.
+        
+     
+          
