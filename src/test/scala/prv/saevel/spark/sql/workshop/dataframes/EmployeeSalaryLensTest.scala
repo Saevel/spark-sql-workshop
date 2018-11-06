@@ -13,14 +13,12 @@ import prv.saevel.spark.sql.workshop.{BasicGenerators, StaticPropertyChecks}
 @RunWith(classOf[JUnitRunner])
 class EmployeeSalaryLensTest extends WordSpec with PropertyChecks with Matchers with BasicGenerators with StaticPropertyChecks {
 
-  private implicit val sparkContext = new SparkContext(new SparkConf().setMaster("local[1]").setAppName("EmplyeeSalaryLensTest"))
+  private implicit val sparkContext = new SparkContext(new SparkConf().setMaster("local[1]").setAppName("EmployeeSalaryLensTest"))
 
   private implicit val sqlContext = new HiveContext(sparkContext)
 
   private implicit def tupleEncoder(implicit e1: Encoder[String], e2: Encoder[Long]): Encoder[(String, String, Long)] =
     Encoders.tuple[String, String, Long](e1, e1, e2)
-
-  private val ids: Gen[Long] = Gen.choose(1, 100000)
 
   private val departments: Gen[String] = Gen.oneOf("HR", "Accounting", "Development", "DBA", "Communications", "Corporate Services")
 
