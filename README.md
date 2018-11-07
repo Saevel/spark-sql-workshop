@@ -1,5 +1,6 @@
 Spark SQL Workshop
 
+
     Task 1: Spark SQL IO
     
         Implement the "readCsv", "readJson", "readOrc" methods in the "prv.saevel.spark.sql.workshop.io.SparkSqlIo"
@@ -7,6 +8,7 @@ Spark SQL Workshop
         operations using SQLContext. 
         
         Run the "SparkSqlIoTest" test to verify the correctness of your implementation.
+
         
     Task 2: Basic Data Frames
     
@@ -16,6 +18,7 @@ Spark SQL Workshop
         ("id" column) of employees from the given "department" earning between "minSalary" and "maxSalary".
         
         Run the "EmployeeSalaryLensTest" to verify the correctness of your implementation. 
+
 
     Task 3: Aggregations & Functions
     
@@ -33,13 +36,24 @@ Spark SQL Workshop
         Run the "SalaryStatisticsTest" to verify the correctness of your implementation.
        
        
-     Task 4: UDFs
+    Task 4: UDFs
         
         Implement the "apply" method in "prv.saevel.spark.sql.workshop.udf.ConsonantsUDF" so that it implements a 
         function that removes all the vowels from a String column in Spark SQL and leaves only consonants (we assume 
         the ASCII consonant / vowel set) and registers this function as an UDF named 'consonants'.
         
         Run the "ConsonantsUDFTest" to verify the correctness of your implementation.
+        
+        
+    Task 5: UDAFs
+    
+        Implement the missing methods / values in the "prv.saevel.spark.sql.workshop.udaf.HarmonicMeanUDAF" object
+        in order to create a Spark SQL UDAF calculating the harmonic mean of the "value" field from multiple rows. 
+        
+        Harmonic mean is defined (for positive numbers) as described here: https://en.wikipedia.org/wiki/Harmonic_mean
+        
+        Run the "HarmonicMeanUDAFTest" to verify the correctness of your implementation.
+           
         
      
           
